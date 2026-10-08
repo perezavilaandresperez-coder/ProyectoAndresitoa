@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070405">
+<meta name="description" content="Inicia sesión o crea tu cuenta en StreamZone.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="StreamZone">
+<meta property="og:title" content="Mi cuenta | StreamZone">
+<meta property="og:description" content="Inicia sesión o crea tu cuenta en StreamZone.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Mi cuenta | StreamZone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="comun.css">
+</head>
+<body>
+<header class="nav">
+  <a href="index.html" class="logo" aria-label="StreamZone, ir al inicio"><i class="fa-solid fa-play" aria-hidden="true"></i><span>Stream<b>Zone</b></span></a>
+  <a href="servicios.html" class="btn btn-g"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i>Servicios</a>
+</header>
+
+<main id="contenido"><div class="box">
+  <span class="mono">Mi cuenta</span>
+
+  <section id="auth">
+    <h1 id="tit">Bienvenido <span class="grad">de nuevo</span></h1>
+    <div class="tabs" role="tablist" aria-label="Acceso">
+      <button role="tab" id="tIn" aria-selected="true" aria-controls="fIn">Ingresar</button>
+      <button role="tab" id="tUp" aria-selected="false" aria-controls="fUp" tabindex="-1">Crear cuenta</button>
+    </div>
+
+    <form id="fIn" role="tabpanel" aria-labelledby="tIn" novalidate>
+      <div class="fg"><label for="inEmail">Correo electrónico</label><input id="inEmail" type="email" autocomplete="email" required></div>
+      <div class="fg"><label for="inPass">Contraseña</label><div class="pw"><input id="inPass" type="password" autocomplete="current-password" required><button class="eye" type="button" data-t="inPass" aria-label="Mostrar contraseña"><i class="fa-regular fa-eye" aria-hidden="true"></i></button></div></div>
+      <p class="msg" id="mIn" role="alert"></p>
+      <button class="btn btn-r" type="submit">Ingresar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+    </form>
+
+    <form id="fUp" role="tabpanel" aria-labelledby="tUp" hidden novalidate>
+      <div class="fg"><label for="upNom">Nombre</label><input id="upNom" autocomplete="name" required></div>
+      <div class="fg"><label for="upEmail">Correo electrónico</label><input id="upEmail" type="email" autocomplete="email" required></div>
+      <div class="fg"><label for="upPass">Contraseña</label><div class="pw"><input id="upPass" type="password" autocomplete="new-password" minlength="8" required aria-describedby="hp"><button class="eye" type="button" data-t="upPass" aria-label="Mostrar contraseña"><i class="fa-regular fa-eye" aria-hidden="true"></i></button></div><p class="hint" id="hp">Mínimo 8 caracteres.</p></div>
+      <p class="msg" id="mUp" role="alert"></p>
+      <button class="btn btn-r" type="submit">Crear cuenta <i class="fa-solid fa-user-plus" aria-hidden="true"></i></button>
+    </form>
+  </section>
+
+  <section class="acc" id="acc" hidden>
+    <h1 style="margin-bottom:22px">Hola, <span class="grad" id="nm"></span></h1>
+    <div class="av" id="av" aria-hidden="true"></div>
+    <p id="em"></p>
+    <a href="servicios.html" class="btn btn-r"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>Ver servicios</a>
+    <a href="pedidos.html" class="btn btn-g"><i class="fa-solid fa-box" aria-hidden="true"></i>Mis pedidos</a>
+    <a href="carrito.html" class="btn btn-g">Ir al carrito</a>
+    <button class="btn btn-g" id="out" type="button"><i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>Cerrar sesión</button>
+  </section>
+
+  <p class="note">Demo: las cuentas se guardan solo en este navegador. Para una tienda real conecta un backend de autenticación.</p>
+</div></main>
+
+<a class="wa" href="#" data-wa data-wa-text="Hola StreamZone, quiero información." aria-label="Escribir por WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+<script src="config.js"></script>
+<script src="comun.js"></script>
+<script src="login.js"></script>
+</body>
+</html>
